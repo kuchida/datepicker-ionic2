@@ -310,7 +310,7 @@ export class DatePickerComponent {
     }
     public getTempMonthYear() {
         if (this.DatepickerService.locale === 'ja-JP')
-            return `${this.getTempYear()} ${this.getTempMonth()}`
+            return `${this.getTempYear()}${this.getTempMonth()}`
         return `${this.getTempMonth()} ${this.getTempYear()}`
     }
     public onCancel(e: Event) {
