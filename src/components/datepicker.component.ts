@@ -36,7 +36,7 @@ import { DateService } from './datepicker.service';
                 ion-button=""
                 class="disable-hover button button-ios button-default button-default-ios">
                 <span class="button-inner">
-                    <ion-icon name="arrow-back" role="img" class="icon icon-ios ion-ios-arrow-back" aria-label="arrow-back" ng-reflect-name="arrow-back"></ion-icon></span><div class="button-effect"></div></button>            {{getTempMonth()}} {{getTempYear()}}
+                    <ion-icon name="arrow-back" role="img" class="icon icon-ios ion-ios-arrow-back" aria-label="arrow-back" ng-reflect-name="arrow-back"></ion-icon></span><div class="button-effect"></div></button>            {{getTempMonthYear()}}
             <button (click)="nextMonth()"
                 ion-button=""
                 class="disable-hover button button-ios button-default button-default-ios">
