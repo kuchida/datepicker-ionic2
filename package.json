@@ -20,7 +20,7 @@
   "scripts": {
     "ngc": "ngc",
     "build": "npm run ngc && node ./scripts/copy-package",
-    "preinstall": "npm run build",
+    "preinstall": "npm run build && cd dist",
     "publishPackage": "npm run build && cd dist && npm publish",
     "dev": "tsc --watch"
   },
