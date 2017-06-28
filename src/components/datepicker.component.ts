@@ -303,7 +303,15 @@ export class DatePickerComponent {
         return this.months[this.tempDate.getMonth()];
     }
     public getTempYear() {
-        return this.tempDate.getFullYear() || this.selectedDate.getFullYear();
+        let year = this.tempDate.getFullYear() || this.selectedDate.getFullYear();
+        if (this.DatepickerService.locale === 'ja-JP')
+            return `${year}年`;
+        return year;
+    }
+    public getTempMonthYear() {
+        if (this.DatepickerService.locale === 'ja-JP')
+            return `${this.getTempYear()} ${this.getTempMonth()}`
+        return `${this.getTempMonth()} ${this.getTempYear()}`
     }
     public onCancel(e: Event) {
         if (this.config.date)
@@ -329,6 +337,8 @@ export class DatePickerComponent {
             return arr.splice(0, limit);
         if (this.DatepickerService.locale === 'zh-CN' || this.DatepickerService.locale === 'zh-TW')
             arr = arr.replace("星期", "")
+        if (this.DatepickerService.locale === 'ja-JP')
+            arr = arr.replace("曜日", "")
         return (<string>arr).slice(0, limit);
     }
     public getMonthRows(): {}[] {
