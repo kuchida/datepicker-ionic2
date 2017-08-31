@@ -8,4 +8,5 @@ if (! packageJson) {
 
 delete packageJson.devDependencies;
 
+fs.mkdirSync('./dist');
 fs.writeFile('./dist/package.json', JSON.stringify(packageJson, null, 2));
