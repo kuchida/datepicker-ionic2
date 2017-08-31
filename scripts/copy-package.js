@@ -10,5 +10,5 @@ delete packageJson.devDependencies;
 
 console.log('Hi');
 console.log(process.cwd());
-//fs.mkdirSync('../dist');
-fs.writeFile('../dist/package.json', JSON.stringify(packageJson, null, 2));
+fs.mkdirSync('./dist');
+fs.writeFile('./dist/package.json', JSON.stringify(packageJson, null, 2));
