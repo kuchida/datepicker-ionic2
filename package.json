@@ -19,8 +19,8 @@
   ],
   "scripts": {
     "ngc": "ngc",
-    "build": "npm install --dev && npm install ngc && npm run ngc && tsc && node ./scripts/copy-package",
-    "preinstall": "npm run build",
+    "build": "npm install ngc && npm run ngc && tsc && node ./scripts/copy-package",
+    "postinstall": "npm run build",
     "publishPackage": "npm run build && cd dist && npm publish",
     "dev": "tsc --watch"
   },
