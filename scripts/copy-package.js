@@ -8,5 +8,7 @@ if (! packageJson) {
 
 delete packageJson.devDependencies;
 
-fs.mkdirSync('./dist');
-fs.writeFile('./dist/package.json', JSON.stringify(packageJson, null, 2));
+console.log('Hi');
+console.log(process.cwd());
+//fs.mkdirSync('../dist');
+fs.writeFile('../dist/package.json', JSON.stringify(packageJson, null, 2));
